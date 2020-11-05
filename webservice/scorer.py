@@ -1,8 +1,10 @@
+import sys
+sys.path.append("./packages")
+
 import datetime
 import itertools
 import os
 import pickle
-import sys
 import sklearn
 import urllib
 from mirna_detector import is_mirna
@@ -24,7 +26,7 @@ scoring_model = None
 try:
     scoring_model = ScoringModel.from_file(model_file_path)
 except Exception as e:
-    print "Failed loading model: %s"%e
+    print("Failed loading model: %s"%e)
 
 def get_text_from_entity_dict(e):
     if e.has_key("origin"):
@@ -52,7 +54,7 @@ def load_model_from_url(url):
     try:
         temp_model = ScoringModel.from_file(temp_model_path)
     except Exception as e:
-        print "Failed to load donwloaded model: %s"%e
+        print("Failed to load donwloaded model: %s"%e)
         os.remove(temp_model_path)
         raise RuntimeError("Failed to load donwloaded model! error: %s"%e)
 

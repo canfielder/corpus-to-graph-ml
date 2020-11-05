@@ -1,0 +1,8 @@
+numpy == 1.11.0
+scikit-learn == 0.15.0
+flask == 0.10.1
+requests == 2.10.0 
+NLTK == 3.1 
+gensim == 0.12.3
+spacy == 0.101.0
+cython == 0.24

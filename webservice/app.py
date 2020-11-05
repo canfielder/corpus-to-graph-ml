@@ -2,7 +2,8 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask import Response
-from sklearn.externals import joblib
+# from sklearn.externals import joblib
+import joblib
 import json
 import scorer
 
